@@ -16,11 +16,11 @@ class Multi:
             # convert matrix_a and matrix_b to int
             for i in range(self.rows_a):
                 for j in range(self.cols_a):
-                    self.matrix_a[i][j] = float(self.matrix_a[i][j])
+                    self.matrix_a[i][j] = int(self.matrix_a[i][j])
 
             for i in range(self.rows_b):
                 for j in range(self.cols_b):
-                    self.matrix_b[i][j] = float(self.matrix_b[i][j])
+                    self.matrix_b[i][j] = int(self.matrix_b[i][j])
 
             # use np.matmul to achieve product
             self.product_matrix = np.matmul(self.matrix_a, self.matrix_b)
