@@ -16,11 +16,11 @@ class Multi:
             # convert matrix_a and matrix_b to int
             for i in range(self.rows_a):
                 for j in range(self.cols_a):
-                    self.matrix_a[i][j] = int(self.matrix_a[i][j])
+                    self.matrix_a[i][j] = float(self.matrix_a[i][j])
 
             for i in range(self.rows_b):
                 for j in range(self.cols_b):
-                    self.matrix_b[i][j] = int(self.matrix_b[i][j])
+                    self.matrix_b[i][j] = float(self.matrix_b[i][j])
 
             # use np.matmul to achieve product
             self.product_matrix = np.matmul(self.matrix_a, self.matrix_b)
@@ -99,7 +99,7 @@ class Multi:
         self.gui_multi_input.resizable(False, False)
 
         # create input frame
-        self.frame_multi_input = Frame(self.gui_multi_input, highlightbackground='black', highlightthickness=1)
+        self.frame_multi_input = Frame(self.gui_multi_input, highlightbackground='red', highlightthickness=1)
         self.frame_multi_input.pack(fill=BOTH, expand=True, padx=5, pady=5)
         # window_dimensions = str(self.m_length.get()**3+90) + "x" + str(self.m_height.get())
         # print(window_dimensions)
